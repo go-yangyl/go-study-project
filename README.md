@@ -15,7 +15,7 @@ go语言学习历程
    - interface和反射
    - goroutine 
    - channel  
-   - Go代码规范 | [Code](go-study/go_basic/go-lint)
+   - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
    
  ### Go常用包
  
