@@ -6,7 +6,7 @@ go语言学习历程
  ### Go基础
    
    - Go命令
-   - Go基本数据类型 | [Code](go-study/Go基本数据类型)
+   - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
    - 数组与切片
    - map
    - 流程控制
