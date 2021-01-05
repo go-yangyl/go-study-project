@@ -5,7 +5,7 @@ go语言学习历程
    
  ### Go基础
    
-   - Go命令
+   - Go环境和命令 | [Code](go-study/go_basic/command)
    - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
    - 数组与切片
    - map
@@ -15,6 +15,7 @@ go语言学习历程
    - interface和反射
    - goroutine 
    - channel  
+   - Go代码规范
    
  ### Go常用包
  
