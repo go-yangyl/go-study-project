@@ -7,7 +7,7 @@ go语言学习历程
    
    - Go环境和命令 | [Code](go-study/go_basic/command)
    - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
-   - 数组与切片
+   - 数组和切片   | [Code](go-study/go_basic/array_slice)
    - map
    - 流程控制
    - 函数
@@ -48,7 +48,7 @@ go语言学习历程
    
 ## Go项目
    
-  ### 7天用Go从零实现Web框架 - Gee
+  ### 学习7天用Go从零实现Web框架 - Gee
    
    
    -

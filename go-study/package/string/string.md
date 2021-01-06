@@ -91,3 +91,13 @@ func ByteToString(b []byte) string {
 }
 ```
 
+
+
+### string转slice
+
+```go
+  var str = "h e l l o"
+	arr := strings.Split(str, " ")
+	fmt.Println(arr)
+```
+
