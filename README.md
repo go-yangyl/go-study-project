@@ -8,8 +8,8 @@ go语言学习历程
    - Go环境和命令 | [Code](go-study/go_basic/command)
    - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
    - 数组和切片   | [Code](go-study/go_basic/array_slice)
-   - map
-   - 流程控制
+   - map        | [Code](go-study/go_basic/map)
+   - 流程控制    |[Code](go-study/go_basic/process_control)
    - 函数
    - 结构体和方法
    - interface和反射
