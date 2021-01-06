@@ -22,7 +22,7 @@ go语言学习历程
    - 文件读取
    - 时间和日期
    - xml和json解析
-   - 字符串处理
+   - 字符串处理 | [Code](go-study/package/string)
    - 正则处理
    - 锁和sync包
    - 网络处理
@@ -53,6 +53,15 @@ go语言学习历程
    
    -
    - 
+   
+
+## 数据结构与算法
+
+   - 二分查找         | [Code](algo/find)
+   - 单双链表      | [Code](algo/link_list)
+   - lru算法         | [Code](algo/lru)
+   - 队列           | [Code](algo/queue)
+   - 排序           | [Code](algo/sort)
     
     
    
