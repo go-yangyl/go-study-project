@@ -12,7 +12,7 @@ go语言学习历程
    - 流程控制    | [Code](go-study/go_basic/process_control)
    - 函数   
    - 结构体和方法
-   - interface和反射
+   - interface和反射 | [Code](go-study/go_basic/interface_reflect)
    - goroutine 
    - channel  
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
