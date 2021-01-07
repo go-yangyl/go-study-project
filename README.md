@@ -9,8 +9,8 @@ go语言学习历程
    - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
    - 数组和切片   | [Code](go-study/go_basic/array_slice)
    - map        | [Code](go-study/go_basic/map)
-   - 流程控制    |[Code](go-study/go_basic/process_control)
-   - 函数
+   - 流程控制    | [Code](go-study/go_basic/process_control)
+   - 函数   
    - 结构体和方法
    - interface和反射
    - goroutine 
@@ -23,8 +23,10 @@ go语言学习历程
    - 时间和日期
    - xml和json解析
    - 字符串处理 | [Code](go-study/package/string)
-   - 正则处理
-   - 锁和sync包
+   - 正则处理   
+   - 锁       | [Code](go-study/package/lock)
+   - sync包   | [Code](go-study/package/sync)
+   - atomic包
    - 网络处理
    
  ### Go进阶学习
@@ -37,6 +39,7 @@ go语言学习历程
    - GC垃圾回收
    - goroutine调度
    - channel调度
+   - unsafe        | [Code](go-study/advanced/unsafe)
    
  ### Go测试
  
