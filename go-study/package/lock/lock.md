@@ -22,6 +22,35 @@
 
 ----
 
+#### 死锁现象
+```go
+func TradeUnionPointGame_GetTaskDetail(unionId, taskId int) (bool, *TradeUnionTask) {
+	AllTradeUnionInfoList.syncTradeInfoLock.RLock()
+	defer AllTradeUnionInfoList.syncTradeInfoLock.RUnlock()
+    // 如果不使用defer，加锁后return会直接返回，并没有释放锁，下次请求再次尝试加锁
+	for _, v := range AllTradeUnionInfoList.TradeUnionInfo {
+		for _, val := range v.TradeUnionTask {
+			if v.UnionId == unionId && val.TaskId == taskId {
+				return true, val
+			}
+		}
+	}
+
+
+	// 数据同步到内存
+	err, tradeUnionTask := TradeUnionPointGame_GetTradeUnionInfo(unionId)
+	if err != nil {
+		return false, nil
+	}
+	for _, v := range tradeUnionTask.TradeUnionTask {
+		if v.TaskId == taskId {
+			return true, v
+		}
+	}
+
+	return false, nil
+}
+```
 
 
 #### 源码解读
