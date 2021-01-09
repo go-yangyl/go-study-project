@@ -1,11 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"sync/atomic"
-)
+import "fmt"
 
 func main() {
-	var a int32
-	fmt.Println(atomic.AddInt32(&a, 1))
+
+	fmt.Printf()
+}
+
+type W struct {
+}
+
+func (w *W) Write(p []byte) (n int, err error) {
+	return 1, nil
 }

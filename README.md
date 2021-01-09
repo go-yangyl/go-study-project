@@ -24,6 +24,11 @@ go语言学习历程
    - xml和json解析
    - 字符串处理 | [Code](go-study/package/string)
    - 正则处理   
+   - fmt     | [Code](go-study/package/fmt)
+   - log
+   - template
+   - context
+   - time     | [Code](go-study/package/time)
    - 锁       | [Code](go-study/package/lock)
    - sync包   | [Code](go-study/package/sync)
    - atomic包
