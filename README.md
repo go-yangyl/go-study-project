@@ -26,7 +26,7 @@ go语言学习历程
    - 正则处理   
    - fmt     | [Code](go-study/package/fmt)
    - log
-   - template
+   - template  | [Code](go-study/package/template)
    - context
    - file     | [Code](go-study/package/file)
    - time     | [Code](go-study/package/time)
