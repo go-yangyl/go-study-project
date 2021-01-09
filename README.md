@@ -28,6 +28,7 @@ go语言学习历程
    - log
    - template
    - context
+   - file     | [Code](go-study/package/file)
    - time     | [Code](go-study/package/time)
    - 锁       | [Code](go-study/package/lock)
    - sync包   | [Code](go-study/package/sync)
