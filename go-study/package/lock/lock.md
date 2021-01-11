@@ -22,7 +22,7 @@
 
 ----
 
-#### 死锁现象
+#### 死锁代码
 ```go
 func TradeUnionPointGame_GetTaskDetail(unionId, taskId int) (bool, *TradeUnionTask) {
 	AllTradeUnionInfoList.syncTradeInfoLock.RLock()
@@ -52,6 +52,27 @@ func TradeUnionPointGame_GetTaskDetail(unionId, taskId int) (bool, *TradeUnionTa
 }
 ```
 
+```go
+package main
+
+import "sync"
+
+var mu sync.Mutex
+
+func main() {
+
+	mu.Lock()
+	A()
+	mu.Unlock()
+}
+
+func A() {
+	mu.Lock()
+
+	mu.Unlock()
+}
+
+```
 
 #### 源码解读
 

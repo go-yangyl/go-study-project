@@ -38,3 +38,39 @@ func Alignof(x ArbitraryType) uintptr
 4. `unsafe.Pointer`可以转换为任何指针
 5. `uintptr`可以转换为`unsafe.Pointer`
 6. `unsafe.Pointer`可以转换为`uintptr`
+
+
+
+### string转[]byte
+
+```go
+
+func StringToByte(s string) []byte {
+	stringHeader := (*reflect.StringHeader)(unsafe.Pointer(&s))
+
+	sliceHeader := reflect.SliceHeader{
+		Data: stringHeader.Data,
+		Len:  stringHeader.Len,
+		Cap:  stringHeader.Len,
+	}
+
+	return *(*[]byte)(unsafe.Pointer(&sliceHeader))
+}
+```
+
+
+
+### []byte转string
+
+```go
+func ByteToString(b []byte) string {
+	sliceHeader := (*reflect.SliceHeader)(unsafe.Pointer(&b))
+
+	stringHeader := reflect.StringHeader{
+		Data: sliceHeader.Data,
+		Len:  sliceHeader.Len,
+	}
+
+	return *(*string)(unsafe.Pointer(&stringHeader))
+}
+```

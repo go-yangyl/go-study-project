@@ -1,15 +1,18 @@
 package main
 
-import "fmt"
+import "sync"
+
+var mu sync.Mutex
 
 func main() {
 
-	fmt.Printf()
+	mu.Lock()
+	A()
+	mu.Unlock()
 }
 
-type W struct {
-}
+func A() {
+	mu.Lock()
 
-func (w *W) Write(p []byte) (n int, err error) {
-	return 1, nil
+	mu.Unlock()
 }

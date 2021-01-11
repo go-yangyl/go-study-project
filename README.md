@@ -19,8 +19,6 @@ go语言学习历程
 
  ### Go常用包
 
-   - 文件读取
-   - 时间和日期
    - xml和json解析
    - 字符串处理 | [Code](go-study/package/string)
    - 正则处理   
@@ -32,8 +30,9 @@ go语言学习历程
    - time     | [Code](go-study/package/time)
    - 锁       | [Code](go-study/package/lock)
    - sync包   | [Code](go-study/package/sync)
-   - atomic包
+   - atomic包  
    - 网络处理
+   - io操作   
 
  ### Go进阶学习
 
