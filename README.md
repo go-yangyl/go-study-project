@@ -2,23 +2,23 @@
 go语言学习历程
 
 ## Go学习笔记总结
-   
+
  ### Go基础
-   
+
    - Go环境和命令 | [Code](go-study/go_basic/command)
    - Go基本数据类型 | [Code](go-study/go_basic/basic_data_type)
    - 数组和切片   | [Code](go-study/go_basic/array_slice)
    - map        | [Code](go-study/go_basic/map)
    - 流程控制    | [Code](go-study/go_basic/process_control)
-   - 函数   
+   - 函数         | [Code](go-study/go_basic/function)
    - 结构体和方法
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
    - goroutine 
    - channel  
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
-   
+
  ### Go常用包
- 
+
    - 文件读取
    - 时间和日期
    - xml和json解析
@@ -34,9 +34,9 @@ go语言学习历程
    - sync包   | [Code](go-study/package/sync)
    - atomic包
    - 网络处理
-   
+
  ### Go进阶学习
-   
+
    - GMP模型
    - 内存布局
    - 指针陷阱
@@ -46,23 +46,23 @@ go语言学习历程
    - goroutine调度
    - channel调度
    - unsafe        | [Code](go-study/advanced/unsafe)
-   
+
  ### Go测试
- 
+
    - 单元测试
    - 压力测试
    - 性能测试
    - 覆盖测试
-   
-   
+
+
 ## Go项目
-   
+
   ### 学习7天用Go从零实现Web框架 - Gee
-   
-   
+
+
    -
    - 
-   
+
 
 ## 数据结构与算法
 
@@ -78,12 +78,10 @@ go语言学习历程
 
   - leetcode   | [Code](mysql/sql)
     
-    
    
-   
-   
-   
-     
+
+
+​     
 
 
 
