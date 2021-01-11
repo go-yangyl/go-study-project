@@ -11,7 +11,7 @@ go语言学习历程
    - map        | [Code](go-study/go_basic/map)
    - 流程控制    | [Code](go-study/go_basic/process_control)
    - 函数         | [Code](go-study/go_basic/function)
-   - 结构体和方法   
+   - 结构体和方法   | [Code](go-study/go_basic/struct)
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
    - goroutine 
    - channel  
