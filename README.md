@@ -13,13 +13,13 @@ go语言学习历程
    - 函数         | [Code](go-study/go_basic/function)
    - 结构体和方法   | [Code](go-study/go_basic/struct)
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
-   - goroutine 
+   - goroutine    
    - channel  
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
 
  ### Go常用包
 
-   - xml和json解析
+   - xml和json  | [Code](go-study/package/jsonandxml)
    - 字符串处理 | [Code](go-study/package/string)
    - 正则处理   
    - fmt     | [Code](go-study/package/fmt)
@@ -32,11 +32,12 @@ go语言学习历程
    - sync包   | [Code](go-study/package/sync)
    - atomic包  
    - 网络处理
-   - io操作   
+   - io操作    
+   - 定时任务   | [Code](go-study/package/cron)
 
  ### Go进阶学习
 
-   - GMP模型
+   - GMP模型    | [Code](go-study/advanced/gmp)
    - 内存布局
    - 指针陷阱
    - CGO
@@ -86,6 +87,11 @@ go语言学习历程
     
 #### 2021-01
     完善go学习笔记，在一月份初步完成
+    
+    
+## 励志
+   
+   翻过这座山,就会有人听到你的故事
 ​     
 
 
