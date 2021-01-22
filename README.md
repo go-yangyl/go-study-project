@@ -13,7 +13,7 @@ go语言学习历程
    - 函数         | [Code](go-study/go_basic/function)
    - 结构体和方法   | [Code](go-study/go_basic/struct)
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
-   - goroutine    
+   - goroutine   | [Code](go-study/go_basic/goroutine)
    - channel    | [Code](go-study/go_basic/channel)
    - select   | [Code](go-study/go_basic/select)
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
