@@ -14,18 +14,19 @@ go语言学习历程
    - 结构体和方法   | [Code](go-study/go_basic/struct)
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
    - goroutine    
-   - channel  
+   - channel    | [Code](go-study/go_basic/channel)
+   - select   | [Code](go-study/go_basic/select)
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
 
  ### Go常用包
 
    - xml和json  | [Code](go-study/package/jsonandxml)
-   - 字符串处理 | [Code](go-study/package/string)
+   - string处理 | [Code](go-study/package/string)
    - 正则处理   
    - fmt     | [Code](go-study/package/fmt)
    - log
    - template  | [Code](go-study/package/template)
-   - context
+   - context    | [Code](go-study/package/context)
    - file     | [Code](go-study/package/file)
    - time     | [Code](go-study/package/time)
    - 锁       | [Code](go-study/package/lock)
@@ -39,12 +40,10 @@ go语言学习历程
 
    - GMP模型    | [Code](go-study/advanced/gmp)
    - 内存布局
-   - 指针陷阱
+   - 指针陷阱    
    - CGO
    - 内存管理
    - GC垃圾回收
-   - goroutine调度
-   - channel调度
    - unsafe        | [Code](go-study/advanced/unsafe)
 
  ### Go测试

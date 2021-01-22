@@ -55,8 +55,23 @@
 	fmt.Println(res)
 ```
 
+字符串在 Go 语言中的接口其实非常简单，每一个字符串在运行时都会使用如下的 reflect.StringHeader 表示，其中包含指向字节数组的指针和数组的大小：
 
+```go
+type StringHeader struct {
+	Data uintptr
+	Len  int
+}
+```
+与切片的结构体相比，字符串只少了一个表示容量的 Cap 字段，而正是因为切片在 Go 语言的运行时表示与字符串高度相似，所以我们经常会说字符串是一个只读的切片类型。
 
+```go
+type SliceHeader struct {
+	Data uintptr
+	Len  int
+	Cap  int
+}
+```
 ### string转[]byte
 
 ```go
