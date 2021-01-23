@@ -124,6 +124,24 @@ func lastNumsByCopy(origin []int) []int {
 	return result
 }
 ```
-
+区别
 - 第一个函数直接在原切片基础上进行切片。
 - 第二个函数创建了一个新的切片，将 origin 的最后两个元素拷贝到新切片上，然后返回新切片。
+
+## 注意事项
+slice,map,struct内部还有指针的情况下，不管是函数行参传值，底层是指针,不要进行deepcopy,开辟新的内存空间
+```go
+func main() {
+	var a = []int{1, 2, 3}
+	b := arr(a)
+	b[0] = 10
+	fmt.Println(a, b)
+
+}
+
+func arr(a []int) []int {
+	b := make([]int, len(a))
+	copy(b, a)
+	return b
+}
+```
