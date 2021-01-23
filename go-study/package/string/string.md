@@ -89,6 +89,13 @@ func StringToByte(s string) []byte {
 }
 ```
 
+```go
+type StringHeader struct {
+	Data uintptr
+	Len  int
+}
+```
+与切片的结构体相比，字符串只少了一个表示容量的 Cap 字段，而正是因为切片在 Go 语言的运行时表示与字符串高度相似，所以我们经常会说字符串是一个只读的切片类型。
 
 
 ### []byte转string
