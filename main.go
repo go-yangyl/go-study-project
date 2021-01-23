@@ -1,18 +1,18 @@
 package main
 
-import "sync"
+import (
+	"fmt"
+)
 
-var mu sync.Mutex
+type Duck interface {
+	Quack()
+}
+type Cat struct{}
+
+func (c Cat) Quack() {
+	fmt.Println("meow")
+}
 
 func main() {
 
-	mu.Lock()
-	A()
-	mu.Unlock()
-}
-
-func A() {
-	mu.Lock()
-
-	mu.Unlock()
 }

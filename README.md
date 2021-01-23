@@ -15,37 +15,37 @@ go语言学习历程
    - 函数         | [Code](go-study/go_basic/function)
    - 结构体和方法   | [Code](go-study/go_basic/struct)
    - interface和反射 | [Code](go-study/go_basic/interface_reflect)
-   - goroutine 
-   - channel  
+   - goroutine   | [Code](go-study/go_basic/goroutine)
+   - channel    | [Code](go-study/go_basic/channel)
+   - select   | [Code](go-study/go_basic/select)
    - Go代码规范 | [Code](go-study/go_basic/go-lint/lint.md)
 
  ### Go常用包
 
-   - xml和json解析
-   - 字符串处理 | [Code](go-study/package/string)
+   - xml和json  | [Code](go-study/package/jsonandxml)
+   - string处理 | [Code](go-study/package/string)
    - 正则处理   
    - fmt     | [Code](go-study/package/fmt)
    - log
    - template  | [Code](go-study/package/template)
-   - context
+   - context    | [Code](go-study/package/context)
    - file     | [Code](go-study/package/file)
    - time     | [Code](go-study/package/time)
    - 锁       | [Code](go-study/package/lock)
    - sync包   | [Code](go-study/package/sync)
    - atomic包  
    - 网络处理
-   - io操作   
+   - io操作    
+   - 定时任务   | [Code](go-study/package/cron)
 
  ### Go进阶学习
 
-   - GMP模型
+   - GMP模型    | [Code](go-study/advanced/gmp)
    - 内存布局
-   - 指针陷阱
+   - 指针陷阱    
    - CGO
    - 内存管理
    - GC垃圾回收
-   - goroutine调度
-   - channel调度
    - unsafe        | [Code](go-study/advanced/unsafe)
 
  ### Go测试
@@ -81,7 +81,18 @@ go语言学习历程
     
    
 
+## 2021计划
 
+    不断提高对编程对理解，刷完数据结构与算法，看完操作系统书籍
+    
+    
+#### 2021-01
+    完善go学习笔记，在一月份初步完成
+    
+    
+## 励志
+   
+   翻过这座山,就会有人听到你的故事
 ​     
 
 
