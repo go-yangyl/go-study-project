@@ -24,7 +24,7 @@ go语言学习历程
 
    - xml和json  | [Code](go-study/package/jsonandxml)
    - string处理 | [Code](go-study/package/string)
-   - 正则处理   
+   - 正则处理   | [Code](go-study/package/regexp)
    - fmt     | [Code](go-study/package/fmt)
    - log
    - template  | [Code](go-study/package/template)
