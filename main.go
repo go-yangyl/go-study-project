@@ -2,13 +2,19 @@ package main
 
 import (
 	"fmt"
-	"sync/atomic"
+	"sync"
 )
 
 func main() {
-	var num int32
-	atomic.AddInt32(&num, 1)
+	var mu sync.Mutex
 
-	atomic.StoreInt32(&num, 100)
-	fmt.Println(atomic.LoadInt32(&num))
+	mu.Lock()
+
+	go func() {
+		fmt.Println(111)
+		mu.Unlock()
+	}()
+
+	mu.Lock()
+
 }
