@@ -14,7 +14,7 @@ type Stack struct {
 	MinData []Item
 }
 
-func NewStack() *Stack {
+func NewStack() IStack {
 	return &Stack{
 		Data:    []Item{},
 		MinData: []Item{},
@@ -39,11 +39,10 @@ func (s *Stack) Push(v interface{}) bool {
 }
 
 func (s *Stack) Pop() error {
-
-	s.Data = s.Data[:len(s.Data)-1]
 	if s.Data[len(s.Data)-1] == s.MinData[len(s.MinData)-1] {
 		s.MinData = s.MinData[:len(s.MinData)-1]
 	}
+	s.Data = s.Data[:len(s.Data)-1]
 	return nil
 }
 

@@ -3,7 +3,7 @@ go语言学习历程
 
 所有学习上的成功，都只依靠两件事 -- 策略和坚持，而坚持本身就是最重要的策略！
 
-## Go学习笔记总结
+## go-study     Go学习笔记总结
 
  ### Go基础
 
@@ -65,7 +65,7 @@ go语言学习历程
    - 
 
 
-## 数据结构与算法
+## algo    数据结构与算法
 
    - 二分查找         | [Code](algo/find)
    - 单双链表      | [Code](algo/link_list)
@@ -75,16 +75,19 @@ go语言学习历程
    
    
 
-## mysql
+## mysql   数据库
 
   - leetcode   | [Code](mysql/sql)
   - 
     
    
-## distributed_system
+## distributed_system  分布式系统
 
   - 分布式锁   | [Code](distributed_system/分布式锁.md)
   - 分布式事务  | [Code](distributed_system/分布式事务.md)
+  
+## golang-design-pattern 设计模式
+
 
 ## 2021计划
 
