@@ -87,7 +87,12 @@ go语言学习历程
   - 分布式事务  | [Code](distributed_system/分布式事务.md)
   
 ## golang-design-pattern 设计模式
-
+  - 简单工厂模式 | [Code](golang-design-pattern/简单工厂模式)
+  - 工厂模式 | [Code](golang-design-pattern/工厂模式)
+  - 创建者模式 | [Code](golang-design-pattern/创建者模式)
+  - 原型模式 | [Code](golang-design-pattern/原型模式)
+  - 单例模式 | [Code](golang-design-pattern/单例模式)
+  - 外观模式 | [Code](golang-design-pattern/外观模式)
 
 ## 2021计划
 
