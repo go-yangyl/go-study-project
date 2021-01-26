@@ -41,14 +41,14 @@ go语言学习历程
  ### Go进阶学习
 
    - GMP模型    | [Code](go-study/advanced/gmp)
-   - 内存布局
+   - 内存挂你  
    - 指针陷阱    
    - CGO
-   - 内存管理
-   - GC垃圾回收
+   - 内存管理    | [Code](go-study/advanced/memory)
+   - GC垃圾回收   | 
    - unsafe        | [Code](go-study/advanced/unsafe)
 
- ### Go测试
+ ### Go测试  
 
    - 单元测试    | [Code](go-study/test/单元测试.md)
    - 压力测试
