@@ -10,8 +10,9 @@ type Context struct {
 	Method string
 	Path   string
 
-	W   http.ResponseWriter
-	Req *http.Request
+	W     http.ResponseWriter
+	Req   *http.Request
+	Param map[string]string
 
 	StatusCode int
 }
@@ -22,6 +23,7 @@ func NewContext(w http.ResponseWriter, req *http.Request) *Context {
 		Path:   req.URL.Path,
 		W:      w,
 		Req:    req,
+		Param:  make(map[string]string),
 	}
 }
 

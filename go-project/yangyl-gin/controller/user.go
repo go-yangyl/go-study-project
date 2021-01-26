@@ -5,5 +5,5 @@ import (
 )
 
 func Login(ctx *gin.Context) {
-
+	ctx.String(200, "hello")
 }

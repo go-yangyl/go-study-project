@@ -18,11 +18,10 @@ func TestParsePattern(t *testing.T) {
 
 func TestNode_Insert(t *testing.T) {
 	var nod = new(node)
-	str1 := "a/:a"
+	str1 := "a/:b"
 
-	nod.Insert(ParsePattern(str1), 0)
-
-
-	fmt.Println(nod.Search(ParsePattern("a/c"), 0))
+	nod.Insert(str1, ParsePattern(str1), 0)
+	fmt.Println(nod)
+	fmt.Println(nod.Search(ParsePattern(str1), 0).pattern)
 
 }

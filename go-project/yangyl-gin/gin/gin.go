@@ -17,6 +17,7 @@ func New() *Engine {
 
 // 添加路由 method+"-"+pattern
 func (e *Engine) AddRouter(method, pattern string, handler HandlerFunc) {
+	log.Printf("method:%s,pattern:%s", method, pattern)
 	e.router.AddRouter(method, pattern, handler)
 }
 

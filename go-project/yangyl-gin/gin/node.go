@@ -1,7 +1,6 @@
 package gin
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -14,9 +13,10 @@ type node struct {
 }
 
 // 不同的路由加入node节点
-func (n *node) Insert(parts []string, height int) {
+func (n *node) Insert(pattern string, parts []string, height int) {
 	// 匹配完毕，递归中止
 	if len(parts) == height {
+		n.pattern = pattern
 		return
 	}
 
@@ -27,31 +27,32 @@ func (n *node) Insert(parts []string, height int) {
 		child = &node{part: part, isWaild: part[0] == ':' || part[0] == '*'}
 		n.children = append(n.children, child)
 	}
-	n.Insert(parts, height+1)
-}
-
-func (n *node) Search(parts []string, height int) *node {
-	if len(parts) == height || strings.HasPrefix(n.part, "*") {
-		if len(parts) == 0 {
-			return nil
-		}
-		return n
-	}
-
-	part := parts[height]
-	fmt.Println(part)
-	children := n.MatchSearch(part)
-	if len(children) != 0 {
-		result := n.Search(parts, height+1)
-		return result
-	}
-	return nil
+	child.Insert(pattern, parts, height+1)
 }
 
 func (n *node) MatchInsert(part string) *node {
 	for _, child := range n.children {
 		if child.part == part || child.isWaild {
 			return child
+		}
+	}
+	return nil
+}
+func (n *node) Search(parts []string, height int) *node {
+	if len(parts) == height || strings.HasPrefix(n.part, "*") {
+		if n.pattern == "" {
+			return nil
+		}
+		return n
+	}
+
+	part := parts[height]
+	children := n.MatchSearch(part)
+
+	for _, child := range children {
+		result := child.Search(parts, height+1)
+		if result != nil {
+			return result
 		}
 	}
 	return nil
@@ -65,4 +66,20 @@ func (n *node) MatchSearch(part string) []*node {
 		}
 	}
 	return nodes
+}
+
+// 解析请求url
+func ParsePattern(pattern string) []string {
+	vs := strings.Split(pattern, "/")
+
+	parts := make([]string, 0)
+	for _, item := range vs {
+		if item != "" {
+			parts = append(parts, item)
+			if item[0] == '*' {
+				break
+			}
+		}
+	}
+	return parts
 }
