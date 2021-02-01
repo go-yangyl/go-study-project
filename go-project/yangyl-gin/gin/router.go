@@ -33,17 +33,19 @@ func (r *router) AddRouter(method, pattern string, handler HandlerFunc) {
 
 // 处理请求
 func (r *router) Handler(c *Context) {
-
 	node, params := r.GetRouter(c.Method, c.Path)
 	if node != nil {
+		c.Next()
+
 		key := fmt.Sprintf("%s-%s", c.Method, node.pattern)
-		fmt.Println(key)
 		c.Param = params
 		r.handlers[key](c)
 	} else {
 		c.W.WriteHeader(http.StatusNotFound)
 		fmt.Fprintf(c.W, "404 NOT FOUND: %s\n", c.Req.URL)
 	}
+
+
 }
 
 func (r *router) GetRouter(method, path string) (*node, map[string]string) {

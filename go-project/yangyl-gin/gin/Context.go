@@ -15,6 +15,9 @@ type Context struct {
 	Param map[string]string
 
 	StatusCode int
+
+	Handels []HandlerFunc
+	Index   int
 }
 
 func NewContext(w http.ResponseWriter, req *http.Request) *Context {
@@ -24,7 +27,17 @@ func NewContext(w http.ResponseWriter, req *http.Request) *Context {
 		W:      w,
 		Req:    req,
 		Param:  make(map[string]string),
+		Index:  -1,
 	}
+}
+
+func (c *Context) Next() {
+	c.Index++
+
+	for ; c.Index < len(c.Handels); c.Index++ {
+		c.Handels[c.Index](c)
+	}
+
 }
 
 func (c *Context) PostForm(key string) string {
