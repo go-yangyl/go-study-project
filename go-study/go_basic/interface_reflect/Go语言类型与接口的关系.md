@@ -101,3 +101,18 @@ s.Log(“hello”)
 ```
 
 s 就可以使用 Start() 方法和 Log() 方法，其中，Start() 由 GameService 实现，Log() 方法由 Logger 实现。
+
+
+```go
+func main() {
+	var b = Age(1)
+
+	fmt.Println(b.GetAge())
+}
+
+type Age int
+
+func (a *Age) GetAge() Age {
+	return *a
+}
+```
