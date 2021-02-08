@@ -89,6 +89,10 @@ go语言学习历程
   - 原型模式 | [Code](golang-design-pattern/原型模式)
   - 单例模式 | [Code](golang-design-pattern/单例模式)
   - 外观模式 | [Code](golang-design-pattern/外观模式)
+  
+## git规范  ｜ [Code](git规范.md)
+
+   
 
 ## 2021计划
 
@@ -97,7 +101,10 @@ go语言学习历程
     
 #### 2021-01
     完善go学习笔记，在一月份初步完成
-    
+#### 2021-02
+    继续整理rpc
+    整理git规范
+    整理redis
     
 ## 励志
    
