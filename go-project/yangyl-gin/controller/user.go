@@ -5,7 +5,9 @@ import (
 	"yangyl-gin/gin"
 )
 
+var num = 10000
+
 func Login(ctx *gin.Context) {
-	fmt.Println("控制器消息")
-	ctx.String(200, "hello")
+	num--
+	fmt.Println(num)
 }

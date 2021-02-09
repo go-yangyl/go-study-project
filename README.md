@@ -94,7 +94,7 @@ go语言学习历程
 
 ## operation_system 操作系统
   - 5种网络io模型 | [Code](operation_system/5种网络io模型.md)
-
+  - 理解线程与线程池 | [Code](operation_system/理解线程与线程池.md)
 ## 2021计划
 
     不断提高对编程对理解，刷完数据结构与算法，看完操作系统书籍
