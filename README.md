@@ -93,11 +93,12 @@ go语言学习历程
 ## git规范  ｜ [Code](git规范.md)
 
 ## operation_system 操作系统
-  - 5种网络io模型 | [Code](operation_system/5种网络io模型.md)
-  - 理解线程与线程池 | [Code](operation_system/理解线程与线程池.md)
+  - 5种网络io模型 | [Code](operation_system/从根上理解高性能、高并发/5种网络io模型.md)
+  - 理解线程与线程池 | [Code](operation_system/从根上理解高性能、高并发/理解线程与线程池.md)
 ## 2021计划
 
     不断提高对编程对理解，刷完数据结构与算法，看完操作系统书籍
+    不要一味着追求数量，也要追求质量，都要理解 hhh
     
     
 #### 2021-01
@@ -106,6 +107,7 @@ go语言学习历程
     继续整理rpc
     整理git规范
     整理redis
+    整理操作系统
     
 ## 励志
    
