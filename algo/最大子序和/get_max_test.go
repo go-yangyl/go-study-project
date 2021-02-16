@@ -10,3 +10,16 @@ func TestGetSliceSortMaxNum(t *testing.T) {
 	data := GetSliceSortMaxNum(arr)
 	fmt.Println(data)
 }
+
+func TestGetStringMaxLength(t *testing.T) {
+	s := "cdabad"
+	begin, max := GetStringMaxLength(s)
+	fmt.Println(begin, max)
+
+}
+
+func TestFindDisappearedNumbers(t *testing.T) {
+	var s = "We are happy."
+
+	fmt.Println(FindDisappearedNumbers(s))
+}
