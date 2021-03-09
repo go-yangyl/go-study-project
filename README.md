@@ -89,23 +89,33 @@ go语言学习历程
   - 原型模式 | [Code](golang-design-pattern/原型模式)
   - 单例模式 | [Code](golang-design-pattern/单例模式)
   - 外观模式 | [Code](golang-design-pattern/外观模式)
+  
+## git规范  ｜ [Code](git规范.md)
 
+## operation_system 操作系统
+  - 5种网络io模型 | [Code](operation_system/从根上理解高性能、高并发/5种网络io模型.md)
+  - 理解线程与线程池 | [Code](operation_system/从根上理解高性能、高并发/理解线程与线程池.md)
 ## 2021计划
 
     不断提高对编程对理解，刷完数据结构与算法，看完操作系统书籍
+    不要一味着追求数量，也要追求质量，都要理解 hhh
     
     
 #### 2021-01
     完善go学习笔记，在一月份初步完成
 
 #### 2021-02
-    完善go项目,gorm && group-cache
+    继续整理rpc
+    整理git规范
+    整理redis
+    整理操作系统
+
     
 ## 励志
    
    翻过这座山,就会有人听到你的故事
    善用其能，编写其他人能理解的代码,不过永远别忘记，真正的目标在于讲述系统的故事，而你编写的函数必须干净利落地拼装到一起，形成一种精确而清晰的语言，帮助你讲故事
-​     
+
 
 
 
