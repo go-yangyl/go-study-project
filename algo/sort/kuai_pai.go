@@ -1,10 +1,7 @@
 package sort
 
-import "fmt"
-
 func KuaiPai() {
 	QuickSort(0, len(li)-1)
-	fmt.Println(li)
 }
 
 var li = []int{3, 2, 9, 1, 4, 5, 12, 10}
