@@ -59,6 +59,7 @@ go语言学习历程
 ## Go项目
 
    - 仿写gin         | [Code](go-project/yangyl-gin)
+   - 仿写zinx         | [Code](go-project/yangyl-zinx)
 
 
 ## algo    数据结构与算法
