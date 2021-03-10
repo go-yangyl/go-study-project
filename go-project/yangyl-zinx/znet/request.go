@@ -1,6 +1,6 @@
 package znet
 
-import "go-study-project/go-project/zinx/ziface"
+import "go-study-project/go-project/yangyl-zinx/ziface"
 
 type Request struct {
 	conn ziface.IConnection

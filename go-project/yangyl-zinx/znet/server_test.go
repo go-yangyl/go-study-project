@@ -2,13 +2,27 @@ package znet
 
 import (
 	"fmt"
+	"go-study-project/go-project/yangyl-zinx/ziface"
 	"net"
 	"testing"
 	"time"
 )
 
+func (u *UserRouter) Handle(req ziface.IRequest) {
+	fmt.Println(111)
+}
+
+type UserRouter struct {
+	BaseRouter
+}
+
 func TestNewServer(t *testing.T) {
-	server := NewServer("zinx")
+	server := NewServer("yangyl-zinx")
+
+	user := new(UserRouter)
+
+	server.AddRouter(0, user)
+	server.AddRouter(1, user)
 
 	go ClientTest()
 
@@ -32,9 +46,11 @@ func ClientTest() {
 
 	for {
 		dp := new(DataPack)
-		msg, _ := dp.Pack(NewMsgPackage(0, []byte("hello")))
-		conn.Write(msg)
-
+		msg, _ := dp.Pack(NewMsgPackage(0, []byte("123322131232321")))
+		_, err := conn.Write(msg)
+		if err != nil {
+			fmt.Println(err)
+		}
 		time.Sleep(1 * time.Second)
 	}
 }

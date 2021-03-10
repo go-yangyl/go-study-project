@@ -2,7 +2,7 @@ package znet
 
 import (
 	"fmt"
-	"go-study-project/go-project/zinx/ziface"
+	"go-study-project/go-project/yangyl-zinx/ziface"
 	"io"
 	"net"
 )
@@ -18,7 +18,7 @@ type Connection struct {
 	//告知该链接已经退出/停止的channel
 	ExitBuffChan chan bool
 
-	Router map[uint32]ziface.IRouter
+	msgHandler ziface.IMsgHandler
 }
 
 func (c *Connection) GetTCPConnection() *net.TCPConn {
@@ -33,26 +33,26 @@ func (c *Connection) RemoteAddr() net.Addr {
 	return c.Conn.RemoteAddr()
 }
 
-func NewConnection(conn *net.TCPConn, connID uint32, router map[uint32]ziface.IRouter) *Connection {
+func NewConnection(conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandler) *Connection {
 	return &Connection{
 		Conn:         conn,
 		ConnID:       connID,
 		isClosed:     false,
 		ExitBuffChan: make(chan bool, 1),
-		Router:       router,
+		msgHandler:   msgHandler,
 	}
 }
 
 func (c *Connection) StartReader() {
 	defer c.Stop()
-
 	for {
 		dp := new(DataPack)
 
 		headData := make([]byte, dp.GetHeadLen())
 		if _, err := io.ReadFull(c.GetTCPConnection(), headData); err != nil {
+			fmt.Println("read msg head error ", err)
 			c.ExitBuffChan <- true
-			continue
+			return
 		}
 
 		//拆包，得到msgid 和 datalen 放在msg中
@@ -60,7 +60,7 @@ func (c *Connection) StartReader() {
 		if err != nil {
 			fmt.Println("unpack error ", err)
 			c.ExitBuffChan <- true
-			continue
+			return
 		}
 
 		//根据 dataLen 读取 data，放在msg.Data中
@@ -70,18 +70,13 @@ func (c *Connection) StartReader() {
 			if _, err := io.ReadFull(c.GetTCPConnection(), data); err != nil {
 				fmt.Println("read msg data error ", err)
 				c.ExitBuffChan <- true
-				continue
+				return
 			}
 		}
 
 		msg.SetData(data)
-
 		req := NewRequest(c, msg)
-		go func(request ziface.IRequest) {
-			if router, ok := c.Router[request.GetMsgID()]; ok {
-				router.Handle(request)
-			}
-		}(req)
+		go c.msgHandler.DoMsgHandler(req)
 	}
 }
 
@@ -91,12 +86,14 @@ func (c *Connection) Start() {
 	for {
 		select {
 		case <-c.ExitBuffChan:
+			fmt.Println("ExitBuffChan 退出")
 			return
 		}
 	}
 }
 
 func (c *Connection) Stop() {
+	fmt.Println("Stop 退出")
 	if c.isClosed {
 		return
 	}

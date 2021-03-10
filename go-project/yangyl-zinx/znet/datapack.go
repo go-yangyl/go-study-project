@@ -3,7 +3,7 @@ package znet
 import (
 	"bytes"
 	"encoding/binary"
-	"go-study-project/go-project/zinx/ziface"
+	"go-study-project/go-project/yangyl-zinx/ziface"
 )
 
 type DataPack struct {
@@ -11,7 +11,7 @@ type DataPack struct {
 
 func (d *DataPack) GetHeadLen() uint32 {
 	//Id uint32(4字节) +  DataLen uint32(4字节)
-	return 4 + 40
+	return 4 + 4
 }
 
 func (d *DataPack) Pack(msg ziface.IMessage) ([]byte, error) {
