@@ -76,7 +76,9 @@ func (c *Connection) StartReader() {
 
 		msg.SetData(data)
 		req := NewRequest(c, msg)
-		go c.msgHandler.DoMsgHandler(req)
+
+		c.msgHandler.SendMsgToTaskQueue(req)
+
 	}
 }
 
