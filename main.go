@@ -1,34 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+	"runtime"
+	"time"
+)
 
 func main() {
-	err := DoSthWithBlock(func(a string) error { return do(a) })
 
-	fmt.Println(err)
-}
+	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+		fmt.Println(1)
+		time.Sleep(time.Hour)
+	})
+	http.HandleFunc("/admin", func(writer http.ResponseWriter, request *http.Request) {
+		fmt.Println(2)
+		time.Sleep(time.Hour)
+	})
 
-func DoSthWithBlock(fc func(a string) error) (err error) {
-	err = fc("hello")
-	if err == nil {
-		fmt.Println("error is nil")
-	} else {
-		fmt.Println("error isn't nil")
-	}
-	return
-}
-
-type MyError struct {
-	Code string
-	Msg  string
-}
-
-type MyErrP = *MyError
-
-func (e *MyError) Error() string {
-	return e.Code + e.Msg
-}
-
-func do(a string) error {
-	return nil
+	runtime.GOMAXPROCS(1)
+	http.ListenAndServe(":8080", nil)
 }
